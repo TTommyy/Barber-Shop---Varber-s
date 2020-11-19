@@ -2077,7 +2077,7 @@ input, select, textarea{
     }
 }
 
-@media (min-width: 376px;), (max-width: 1025px) {
+@media (min-width: 379px) and (max-width: 1025px) {
     * {
         margin: 0;
         padding: 0;
