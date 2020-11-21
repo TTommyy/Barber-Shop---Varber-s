@@ -11,6 +11,7 @@ body {
     line-height: 29px;
     letter-spacing: 2.8px;
     color: #cfcaca;
+    overflow-x: hidden;
 }
 
 button {

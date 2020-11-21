@@ -1,3 +1,4 @@
+// Animations throughout the whole page
 const tl = gsap.timeline({ defaults: { ease: "power1.out"}});
 
 tl.from(".lp-title1, .lp-title2, .landing-page p, .lp-button", {x: "-35%", opacity: 0, duration: 1, stagger: 0.08})
@@ -31,7 +32,7 @@ const wuTl = gsap.timeline({
 wuTl.from(".whyus-h1, .whyus-p1, .whyus-p2", {x: "-50%", opacity: 0, duration: 1, delay: 0.1})
     .from(".title-seperator3", {x: "-50%", opacity: 0}, "-=0.5")
     .from(".bubble-1, .bubble-2, .bubble-3", {opacity: 0, duration: 0.3}, "-=0.16")
-    .from(".whyus-img", {duration: 1.2, opacity: 0, delay: 0.75});
+    .from(".whyus-img", {duration: 1.2, opacity: 0, delay: 0.60});
 
 const TestTl = gsap.timeline({
     scrollTrigger: {
@@ -49,5 +50,18 @@ const ContTl = gsap.timeline({
     }
 });
 
-ContTl.from(".contact-info", {x: "-50%", opacity: 0, duration: 1.3})
-ContTl.from(".contact-footer", {x: "50%", opacity: 0, duration: 1.3}, "-=1.3")
+ContTl.from(".contact-info", {x: "-50%", opacity: 0, duration: 1.5})
+    .from(".contact-footer", {x: "50%", opacity: 0, duration: 1.5}, "-=1.5");
+
+// Socials landing page
+const homeSocials = document.querySelector(".fb-lp");
+
+homeSocials.addEventListener("mouseover", (e) => {
+    e.preventDefault();
+    document.querySelector(".fb-lp").style.background = "#fff";
+});
+
+homeSocials.addEventListener("mouseout", (e) => {
+    e.preventDefault();
+    document.querySelector(".fb-lp").style.background = "none";
+});
