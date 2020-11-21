@@ -1,7 +1,7 @@
 // Animations throughout the whole page
 const tl = gsap.timeline({ defaults: { ease: "power1.out"}});
 
-tl.from(".lp-title1, .lp-title2, .landing-page p, .lp-button", {x: "-35%", opacity: 0, duration: 1, stagger: 0.08})
+tl.from(".lp-title1, .lp-title2, .landing-page p, .lp-button", {x: "-35%", opacity: 0, duration: 1, stagger: 0.05})
 
 const wwoTl = gsap.timeline({
     scrollTrigger: {
@@ -10,8 +10,8 @@ const wwoTl = gsap.timeline({
     }
 });
 
-wwoTl.from(".wwo h1, .wwo p, .wwo button", {x: "-38%", opacity: 0, duration: 1.3})
-    .from(".title-seperator", {x: "-50%", opacity: 0}, "-=0.5");
+wwoTl.from(".wwo h1, .wwo p, .wwo button", {x: "-50%", opacity: 0, duration: 1.3})
+    .from(".title-seperator", {x: "-75%", opacity: 0, duration: 0.4}, "-=0.5");
 
 const benTl = gsap.timeline({
     scrollTrigger: {
@@ -20,7 +20,8 @@ const benTl = gsap.timeline({
     }
 });
 
-benTl.from(".benefits-h1, .title-seperator2, .benefits-p1, .benefits-p2", {opacity: 0, duration: 3, stagger: 0.05, delay: 0.2});
+benTl.from(".benefits-h1, .benefits-p1, .benefits-p2", {opacity: 0, x: "50%", duration: 1., stagger: 0.05, delay: 0.2})
+    .from(".title-seperator2", {x: "100%", opacity: 0, duration: 0.4}, "-=0.5");
 
 const wuTl = gsap.timeline({
     scrollTrigger: {
@@ -30,9 +31,8 @@ const wuTl = gsap.timeline({
 });
 
 wuTl.from(".whyus-h1, .whyus-p1, .whyus-p2", {x: "-50%", opacity: 0, duration: 1, delay: 0.1})
-    .from(".title-seperator3", {x: "-50%", opacity: 0}, "-=0.5")
-    .from(".bubble-1, .bubble-2, .bubble-3", {opacity: 0, duration: 0.3}, "-=0.16")
-    .from(".whyus-img", {duration: 1.2, opacity: 0, delay: 0.60});
+    .from(".title-seperator3", {x: "-75%", opacity: 0, duration: 0.4}, "-=0.5")
+    .from(".whyus-img", {duration: 1, opacity: 0, delay: 0.40});
 
 const TestTl = gsap.timeline({
     scrollTrigger: {
@@ -41,7 +41,8 @@ const TestTl = gsap.timeline({
     }
 });
 
-TestTl.from(".test-info h1, .title-seperator6, .test-user, .test-sign, .test-button", {opacity: 0, duration: 3, stagger: 0.05, delay: 0.2});
+TestTl.from(".test-info h1, .test-user, .test-sign, .test-button", {opacity: 0, x: "-50%", duration: 1., stagger: 0.05, delay: 0.2})
+    .from(".title-seperator6", {x: "-100%", opacity: 0, duration: 0.5}, "-=0.5");
 
 const ContTl = gsap.timeline({
     scrollTrigger: {
@@ -50,18 +51,5 @@ const ContTl = gsap.timeline({
     }
 });
 
-ContTl.from(".contact-info", {x: "-50%", opacity: 0, duration: 1.5})
-    .from(".contact-footer", {x: "50%", opacity: 0, duration: 1.5}, "-=1.5");
-
-// Socials landing page
-const homeSocials = document.querySelector(".fb-lp");
-
-homeSocials.addEventListener("mouseover", (e) => {
-    e.preventDefault();
-    document.querySelector(".fb-lp").style.background = "#fff";
-});
-
-homeSocials.addEventListener("mouseout", (e) => {
-    e.preventDefault();
-    document.querySelector(".fb-lp").style.background = "none";
-});
+ContTl.from(".contact-info", {x: "-50%", opacity: 0, duration: 1.25})
+    .from(".contact-footer", {x: "50%", opacity: 0, duration: 1.25}, "-=1.4");
